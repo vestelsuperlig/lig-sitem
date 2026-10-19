@@ -284,11 +284,7 @@ footer{
   <p style="color:#aebbd0">2026-2027 Tolga Kalender Sezonu</p>
   <div id="scorersList"></div>
 </section>
-<section id="assists" class="hidden">
-  <h2>🅰️ Asist Krallığı</h2>
-  <p style="color:#aebbd0">Vestel Süper Lig 2026-2027 Tolga Kalender Sezonu</p>
-  <div id="assistsList"></div>
-</section>
+
 </main>
 
 <footer>Vestel Süper Lig © 2026</footer>
@@ -728,60 +724,11 @@ renderTeams();
 
 renderScorers();
 
-const assistResults = [
-  ["De Jong", "Bursaspor", 1],
-  ["Cristiano Ronaldo", "Bursaspor", 1],
-  ["Serginho", "Germencikspor", 3],
-  ["Gareth Bale", "Germencikspor", 1],
-  ["Luis Suárez", "Germencikspor", 2],
-];
+
+
+
+
   
-
-function addAssist(name, team, count = 1) {
-  const player = assistResults.find(
-    p => p[0].toLowerCase() === name.trim().toLowerCase()
-      && p[1] === team
-  );
-
-  if (player) {
-    player[2] += count;
-  } else {
-    assistResults.push([name.trim(), team, count]);
-  }
-
-  renderAssists();
-}
-
-function renderAssists() {
-  const totals = {};
-
-  assistResults.forEach(([name, team, assists]) => {
-    const key = name.trim().toLowerCase() + "|" + team;
-
-    if (!totals[key]) {
-      totals[key] = { name, team, assists: 0 };
-    }
-
-    totals[key].assists += Number(assists);
-  });
-
-  const sorted = Object.values(totals)
-    .sort((a, b) => b.assists - a.assists);
-
-  document.getElementById("assistsList").innerHTML =
-    sorted.map((p, i) => `
-      <div class="scorer-row">
-        <div class="scorer-rank">${i + 1}</div>
-        <div>
-          <div class="scorer-name">${p.name}</div>
-          <div class="scorer-team">${p.team}</div>
-        </div>
-        <div class="scorer-goals">${p.assists} asist</div>
-      </div>
-    `).join("");
-}
-
-renderAssists();
 
 </script>
 
