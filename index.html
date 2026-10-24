@@ -652,68 +652,92 @@ function page(id,button){
    GÜNLÜK MAÇ SONUÇLARI
    ========================= */
 const scorerResults = [
+
+  // KÜTAHYASPOR
+  ["Andriy Shevchenko", "Kütahyaspor", 14],
+  ["Thomas Rosický", "Kütahyaspor", 2],
+  ["Kvaratskhelia", "Kütahyaspor", 2],
+  ["Johan Cruyff", "Kütahyaspor", 2],
+  ["Pelé", "Kütahyaspor", 2],
+  ["Clarence Seedorf", "Kütahyaspor", 1],
+  ["Eric Cantona", "Kütahyaspor", 1],
+  ["Pepe", "Kütahyaspor", 1],
+
+  // GERMENCİKSPOR
   ["Gareth Bale", "Germencikspor", 9],
   ["Luis Suárez", "Germencikspor", 3],
-  ["Patrick Vieira", "Bursaspor", 1],
+  ["Lamine Yamal", "Germencikspor", 1],
+  ["Nico O'Reilly", "Germencikspor", 1],
+
+  // BURSASPOR
   ["Kylian Mbappé", "Bursaspor", 12],
+  ["Cristiano Ronaldo", "Bursaspor", 5],
+  ["Patrick Vieira", "Bursaspor", 1],
+
+  // ELAZIĞSPOR
+  ["Luis Suárez", "Elazığspor", 6],
+  ["Lionel Messi", "Elazığspor", 4],
   ["Wayne Rooney", "Elazığspor", 3],
   ["Pierre-Emerick Aubameyang", "Elazığspor", 3],
-  ["Andriy Shevchenko", "Kütahyaspor", 14],
+  ["Adrien Rabiot", "Elazığspor", 2],
+  ["Declan Rice", "Elazığspor", 1],
+
+  // 45 MANİSA FK
+  ["Victor Osimhen", "45 Manisa FK", 3],
+  ["Zlatan Ibrahimović", "45 Manisa FK", 2],
   ["Ruud Gullit", "45 Manisa FK", 1],
   ["Michael Platini", "45 Manisa FK", 1],
   ["Arda Güler", "45 Manisa FK", 1],
+  ["Eden Hazard", "45 Manisa FK", 1],
+  ["Frank Lampard", "45 Manisa FK", 1],
+
+  // AYDINSPOR 1966
   ["Filippo Inzaghi", "Aydınspor 1966", 10],
   ["El Hadji Diouf", "Aydınspor 1966", 7],
   ["Kylian Mbappé", "Aydınspor 1966", 1],
-  ["Pelé", "Karpuzlu FK", 1],
+  ["Lionel Messi", "Aydınspor 1966", 1],
+  ["Orkun Kökçü", "Aydınspor 1966", 1],
+  ["McKennie", "Aydınspor 1966", 1],
+
+  // KARPUZLU FK
   ["Alessandro Del Piero", "Karpuzlu FK", 4],
+  ["Gabriel Batistuta", "Karpuzlu FK", 2],
   ["Gareth Bale", "Karpuzlu FK", 2],
+  ["Pelé", "Karpuzlu FK", 1],
+
+  // ERZURUMSPOR
   ["Kylian Mbappé", "Erzurumspor", 5],
   ["Lionel Messi", "Erzurumspor", 1],
   ["Bebeto", "Erzurumspor", 1],
+  ["Luis Suárez", "Erzurumspor", 1],
+
+  // MARDİN 1969
+  ["Cristiano Ronaldo", "Mardin 1969", 3],
+  ["Victor Osimhen", "Mardin 1969", 2],
+  ["Kylian Mbappé", "Mardin 1969", 1],
   ["Ronaldinho", "Mardin 1969", 1],
   ["Marco van Basten", "Mardin 1969", 1],
-  ["Nico O'Reilly", "Germencikspor", 1],
+  ["Filippo Inzaghi", "Mardin 1969", 1],
+  ["Neymar", "Mardin 1969", 1],
+
+  // ÇİNE MADRANSPOR
   ["Daniele Massaro", "Çine Madranspor", 5],
   ["Alessandro Del Piero", "Çine Madranspor", 5],
   ["Filippo Inzaghi", "Çine Madranspor", 2],
   ["Marco van Basten", "Çine Madranspor", 2],
-  ["Luis Suárez", "Elazığspor", 6],
-  ["Lionel Messi", "Elazığspor", 4],
-  ["Zlatan Ibrahimović", "45 Manisa FK", 2],
-  ["Victor Osimhen", "45 Manisa FK", 3],
-  ["Eden Hazard", "45 Manisa FK", 1],
-  ["Frank Lampard", "45 Manisa FK", 1],
-  ["Luis Suárez", "Erzurumspor", 1],
-  ["Lionel Messi", "Aydınspor 1966", 1],
-  ["Orkun Kökçü", "Aydınspor 1966", 1],
-  ["Cristiano Ronaldo", "Mardin 1969", 3],
-  ["Filippo Inzaghi", "Mardin 1969", 1],
-  ["Neymar", "Mardin 1969", 1],
-  ["Cristiano Ronaldo", "Bursaspor", 5],
-  ["Victor Osimhen", "Mardin 1969", 2],
-  ["Wesley Sneijder", "Artukluspor", 2],
-  ["Gareth Bale", "Artukluspor", 1],
-  ["Kylian Mbappé", "Artukluspor", 4],
-  ["Zico", "Artukluspor", 1],
-  ["Johan Cruyff", "Kütahyaspor", 2],
-  ["Clarence Seedorf", "Kütahyaspor", 1],
-  ["Eric Cantona", "Kütahyaspor", 1],
-  ["Pelé", "Kütahyaspor", 2],
-  ["Erling Haaland", "Artukluspor", 1],
-  ["Lamine Yamal", "Germencikspor", 1],
-  ["Thomas Rosický", "Kütahyaspor", 2],
-  ["Declan Rice", "Elazığspor", 1],
-  ["Adrien Rabiot", "Elazığspor", 2],
-  ["Kvaratskhelia", "Kütahyaspor", 2],
-  ["Pepe", "Kütahyaspor", 1],
   ["Huijsen", "Çine Madranspor", 1],
-  ["Kylian Mbappé", "Mardin 1969", 1],
-  ["McKennie", "Aydınspor 1966", 1],
+
+  // ARTUKLUSPOR
   ["Romario", "Artukluspor", 3],
+  ["Kylian Mbappé", "Artukluspor", 4],
+  ["Wesley Sneijder", "Artukluspor", 2],
+  ["Erling Haaland", "Artukluspor", 1],
   ["Harry Kane", "Artukluspor", 1],
-  ["Gabriel Batistuta", "Karpuzlu FK", 2],
   ["Lionel Messi", "Artukluspor", 1],
+  ["Gareth Bale", "Artukluspor", 1],
+  ["Zico", "Artukluspor", 1],
+
+];
   
   
   
